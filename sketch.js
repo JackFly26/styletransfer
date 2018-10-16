@@ -14,7 +14,7 @@ let video;
 let resultImg;
 
 function setup() {
-  createCanvas(320, 240).parent('canvasContainer');
+  createCanvas(400, 300).parent('canvasContainer');
 
   video = createCapture(VIDEO);
   video.hide();
@@ -25,11 +25,11 @@ function setup() {
 
   // Create a new Style Transfer method with a defined style.
   // We give the video as the second argument
-  style = ml5.styleTransfer('models/fuchun', video, modelLoaded);
+  style = ml5.styleTransfer('models/mom', video, modelLoaded);
 }
 
 function draw(){
-  image(resultImg, 0, 0, 320, 240);
+  image(resultImg, 0, 0, width, height);
 }
 
 // A function to call when the model has been loaded.
